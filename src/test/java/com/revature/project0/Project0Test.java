@@ -129,7 +129,6 @@ class Project0Test {
 			while(rs.next())
 				count++;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			fail("Connection failed");
 			e.printStackTrace();
 		}

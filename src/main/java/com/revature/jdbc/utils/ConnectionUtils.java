@@ -17,9 +17,14 @@ public class ConnectionUtils {
 		try {
 			Class.forName("org.postgresql.Driver");
 			connection = DriverManager.getConnection(
-					System.getenv("DB_URL")+System.getenv("DB_NAME"),
-					System.getenv("DB_USER"),
-					System.getenv("DB_PASS"));
+					"jdbc:postgresql://localhost:5432/project0",
+					"postgres",
+					"postgres"
+					);
+//			connection = DriverManager.getConnection(
+//					System.getenv("DB_URL")+System.getenv("DB_NAME"),
+//					System.getenv("DB_USER"),
+//					System.getenv("DB_PASS"));
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
